@@ -36,3 +36,307 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+
+
+
+/* VIDEO OF HOME PAGE  */
+/* Common styles for both mobile and desktop */
+.video-container {
+  padding-top: 100px;
+  width: 100%;
+  height: 0;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 50.25%; /* 16:9 aspect ratio for responsive video */
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+.content-container1 {
+  border-radius: 50px;
+  position: absolute;
+  padding: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: #ffffff;
+  opacity: 0.8;
+}
+
+.content-container1:hover {
+ opacity: 1;
+ border: 2px solid #156570;
+}
+
+.content-container1 > p {
+  color: #156570;
+  font-size: 20px;
+  text-shadow: 2px 2px 4px rgb(255, 255, 255);
+ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.heading-main1 {
+  color: #156570;
+  font-size: 2rem;
+  text-shadow: 2px 2px 4px rgb(147, 238, 238);
+  font-weight: bold;
+  padding-right: 80px;
+  font: 2em sans-serif;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .content-container > p,
+  .heading-main1 {
+      font-size: 1rem;
+  }
+  
+  .video-container {
+    padding-bottom: 100%; /* Adjust aspect ratio for smaller screens */
+  }
+}
+
+/* VIDEO OF HOME PAGE ENDS HERE  */
+
+
+
+
+
+
+/* COUNTER SECTION  */
+.main-counter {
+  text-align: center;
+  margin-top: 50px;
+background-color: #36454F;
+  
+}
+
+.counter {
+  display: inline-block;
+  background-color: #301934;
+  margin: 10px;
+  padding: 20px;
+  /* border: 1px solid #ffffff; */
+  border-radius: 5px;
+  width: calc(33.33% - 20px);
+  height: 200px;
+}
+
+
+.counter > h2 {
+  color: white;
+  font-size: 26px;
+  font-size: 2vw; /* Responsive font size using viewport width */
+margin: 10px 0;
+}
+
+.counter > img {
+  width: 150px;
+  height: 120px;
+  max-height: 15vw;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .counter {
+    width: calc(50% - 20px);
+  }
+}
+ /* cOUTER SECTION ENDS HERE  */
+
+
+
+
+/* Blogs.css */
+.blog-container {
+  display: flex;
+  align-items: center; /* Center items vertically */
+}
+
+.blog-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center items horizontally */
+}
+
+
+
+/* CAROUSEL CSS  */
+/* Carousel.css */
+.carousel-caption {
+  position: absolute;
+  margin-left:170px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.carousel-caption h3 {
+  margin: 0;
+  font-size: 44px;
+}
+
+.carousel-caption p {
+  margin: 0;
+  font-size: 28px;
+}
+
+
+
+
+
+/* ARTICLES  */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+  gap: 10px; /* Adjust the gap as needed */
+}
+
+.card {
+  position: relative; /* Add relative positioning for hover effect */
+  border-radius: 1px; /* Rounded corners */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a prominent box shadow */
+  overflow: hidden; /* Hide shadow overflow */
+  transition: box-shadow 0.3s; /* Smooth transition for box shadow */
+
+}
+
+.card:hover {
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+
+  transition: transform 0.3s; /* Smooth transition for image size */
+}
+
+.card:hover img {
+  transform: scale(1.05); /* Increase size on hover */
+}
+
+.card-body {
+  padding: 1rem;
+  text-align: center;
+  background-color: #36454F;
+  border: none;
+}
+
+.card-title {
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: white;
+}
+
+.card-text {
+  margin-bottom: 1.5rem;
+  color: gray;
+}
+
+.btn-primary {
+  background-color: yellow;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  display: inline-block;
+}
+
+
+
+
+/* news  */
+/* Add this CSS in your existing stylesheet */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.card.appear {
+  animation: fade-in 1s ease-in-out;
+}
+
+
+
+
+
+
+/* HOROSCOPEBLOCK  */
+/* Add this CSS in your stylesheet */
+.horoscope-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+
+.horoscope-blocks {
+  display: flex;
+  gap: 20px;
+}
+
+.horoscope-block {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px; /* Add padding */
+}
+
+.horoscope-block img {
+  width: 50px;
+  height: 50px;
+}
+
+.horoscope-block p {
+  display: block;
+  margin-top: 10px;
+  color: white;
+  font-family:cursive;
+}
+/* Add this CSS in your stylesheet */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
